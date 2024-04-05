@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
 
-    private var userId: String? = null
+    private var userId: String? = "sdfjsdf"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
             delay(SPLASH_TIME)
 
             userId?.let {
-                startActivity(MainActivity.callIntent(this@SplashActivity))
+                startActivity(AccountActivity.callIntent(this@SplashActivity))
             } ?: run {
                 startActivity(OnboardingActivity.callIntent(this@SplashActivity))
             }
